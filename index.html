@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<div id="lines">
+    
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>  
+<script>  
+    var socket = io.connect('/');
+    socket.on('linesRead', function(data) {
+      $("#lines").html("");
+      for(var i = 0; i < data.fromFile.length; i++){
+      $("#lines").prepend("<br />");
+          console.log(data.fromFile.length -1 + "__ " + i);
+          if(data.fromFile[i].includes("delayed")){ 
+              var tmpLine = data.fromFile[i].replace('Farming ', '<br />Farming ') + "<br/>";
+              tmpLine = '<span class="lineError">' + tmpLine + '</span>';
+              console.log(tmpLine);
+              $("#lines").prepend(tmpLine);
+          } 
+          else{
+              var tmpLine = data.fromFile[i].replace('Farmlist ', '<br />Farmlist ') + "<br/>";
+              tmpLine = '<span class="lineSuccess">' + tmpLine + '</span>';
+              console.log(tmpLine);
+              $("#lines").prepend(tmpLine);
+          }
+      }
+    });
+</script>  
+</body>
+
+</html>

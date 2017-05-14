@@ -1,0 +1,12 @@
+{
+    "en" : {
+        "WelcomeUser1" : "Welcome",
+        "WelcomeUser2" : "Have a nice day",
+        "SayRole" : "Your role is"
+    },
+    "se" : {
+        "WelcomeUser1" : "Välkommen",
+        "WelcomeUser2" : "Ha en trevlig dag",
+        "SayRole" : "Din roll är"
+    }
+}

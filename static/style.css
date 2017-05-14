@@ -1,0 +1,13 @@
+body{
+    background:#333;
+    color:#999;
+    font-size:1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.lineError{
+    color:#ee3333;
+}
+.lineSuccess{
+    color:#eee;
+}

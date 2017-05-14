@@ -1,0 +1,2 @@
+2017-05-14 12:07:55 : Farmlist sent 1285 -> 782 TKs
+2017-05-14 12:10:10 : Farming delayed. Not enough units (807 TKs)
